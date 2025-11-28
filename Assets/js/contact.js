@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let valid = true;
 
         const nameValue = nameInput.value.trim();
-        const namePattern = /^[a-zA-Z\s\-]{1,50}$/;
+        const namePattern = /^[a-zA-Z\s-]{1,50}$/;
         if (nameValue === ""){
             nameError.innerText = "Please enter a name.";
             valid = false;
