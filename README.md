@@ -10,12 +10,12 @@ including the use of:
 - Tailwind
 
 ## Colour Scheme
-| Name                     | RGB           | HEX     |
-|--------------------------|---------------|---------|
-| black                    | 0, 0, 0       | #000000 |
-| white                    | 255, 255, 255 | #FFFFFF |
-| vivid pink               | 237, 17, 97   | #ED1161 |
-| slightly less vivid pink | 255, 65, 125  | #FF417D |
-| light vivid pink         | 255, 159, 185 | #FF9FB9 |
-| very light vivid red     | 255, 226, 233 | #FFE2E9 |
+| Name     | RGB           | HEX      |
+|----------|---------------|----------|
+| black    | 0, 0, 0       | #000000  |
+| white    | 255, 255, 255 | #FFFFFF  |
+| Rose-600 | 225, 29, 272  | #ED11D48 |
+| Rose-500 | 244, 63, 94   | #F43F5E  |
+| Rose-400 | 251, 113, 133 | #FB7185  |
+| Rose-200 | 254, 202, 202 | #FECACA  |
  
