@@ -14,12 +14,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let valid = true;
 
-        if (nameInput.value.trim() === "") {
-            nameError.textContent = "Name cannot be empty.";
+        const nameValue = nameInput.value.trim();
+        const namePattern = /^[a-zA-Z\s\-]{1,50}$/;
+        if (nameValue === ""){
+            nameError.innerText = "Please enter a name.";
+            valid = false;
+        } else if (!namePattern.test(nameValue)) {
+            nameError.textContent = "The name must more than 1 character";
             valid = false;
         } else {
-            nameError.textContent = "";
+            nameError.textContent = ""
         }
+
 
         const emailValue = emailInput.value.trim();
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -34,11 +40,17 @@ document.addEventListener("DOMContentLoaded", () => {
             emailError.textContent = "";
         }
 
-        if (messageInput.value.trim() === "") {
-            messageError.textContent = "Message cannot be empty.";
+        const messageContent = messageInput.value.trim();
+        const messagePattern = /^.{10,}$/;
+
+        if (messageContent === ""){
+            messageError.textContent = "The message field cannot be empty."
             valid = false;
-        } else {
-            messageError.textContent = "";
+        } else if (!messagePattern.test(messageContent)) {
+            messageError.textContent = "The message must be at least 10 characters long."
+            valid = false;
+        } else{
+            messageError.textContent = ""
         }
 
         if (valid) {
