@@ -1,0 +1,165 @@
+body {
+    background-color: #EEE2DC;
+    color: #123C69;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body > header {
+    display: flex;
+    text-align: left;
+    padding: 5px 0;
+    background: #123C69;
+    color: #EEE2DC;
+}
+
+main{
+    background-color: #EEE2DC;
+    max-width: 100%;
+    padding: 1em;
+    display: grid;
+    gap: 20px;
+}
+
+body > footer{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    background: #BAB2B5;
+}
+
+article{
+    padding: 60px 30px 50px 80px;
+    background: #EDC7B7;
+}
+
+aside {
+    background: #EDC7B7;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+form{
+    background: #eeab8c;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+form header {
+    text-align: center;
+}
+
+.checkboxes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.user-input{
+    margin-bottom: 25px;
+    text-align: center;
+    padding: 10px;
+}
+
+.response-box{
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #EEE2DC;
+    background: wheat;
+}
+
+.submit-section{
+    text-align: center;
+}
+
+
+@media (max-width: 767px){
+    body >header{
+        position: sticky;
+        top: 0;
+    }
+
+    nav,aside{
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    body > header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 10px;
+        display: flex;
+        gap: 1em;
+    }
+
+    nav {
+        display: block;
+    }
+
+    main {
+        max-width: 1200px;
+        margin: auto;
+        padding-top: 100px;
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        gap: 20px;
+    }
+
+    body > footer {
+        position: static;
+        height: 60px;
+        display: flex;
+        align-items: flex-start;
+        padding: 0 1em;
+        background: #BAB2B5;
+    }
+
+    aside {
+        flex-direction: column;
+        gap: 20px;
+        background: lavenderblush;
+        padding: 10px;
+        grid-column: 2;
+        margin-bottom: 20px;
+    }
+
+    article {
+        grid-column: 1;
+    }
+
+    .user-input input [type="text"]{
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+}
